@@ -18,8 +18,7 @@ const Welcome = () => {
 
       {/* Dominators Logo */}
       <div className="mt-10 flex flex-col items-center">
-        <img src={dominatorsLogo} alt="Dominators Logo" className="h-20 " />
-        <p className="text-sm font-medium tracking-wider">DOMINATORS</p>
+        <img src={dominatorsLogo} alt="Dominators Logo" className="h-80 " />
       </div>
     </div>
   );
