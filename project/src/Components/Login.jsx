@@ -1,11 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaUser, FaLock } from "react-icons/fa";
 
 const Login = ({ onNavigate }) => {
-  const handleLogin = (e) => {
+  const [formData, setFormData] = useState({
+    username: "",
+    password: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleLogin = async (e) => {
     e.preventDefault();
-    // Perform authentication logic here
-    onNavigate("welcome"); // Navigate to Welcome page
+    // Perform login authentication logic
+    const { username, password } = formData;
+    const response = await fetch("http://localhost:5000/login", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ username, password }),
+    });
+    const data = await response.json();
+    alert(data.message);
+    
+    if (response.ok) {
+      onNavigate("welcome"); // Navigate to the Welcome page on successful login
+    }
   };
 
   return (
@@ -19,6 +39,9 @@ const Login = ({ onNavigate }) => {
             <FaUser className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#00264D]" />
             <input
               type="text"
+              name="username"
+              value={formData.username}
+              onChange={handleChange}
               className="w-full outline-none bg-transparent pl-10 py-2 text-gray-700 focus:outline-none focus:ring-1 focus:ring-[#2D5597]"
               placeholder="Username"
               required
@@ -28,6 +51,9 @@ const Login = ({ onNavigate }) => {
             <FaLock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#00264D]" />
             <input
               type="password"
+              name="password"
+              value={formData.password}
+              onChange={handleChange}
               className="w-full outline-none bg-transparent pl-10 py-2 text-gray-700 focus:outline-none focus:ring-1 focus:ring-[#2D5597]"
               placeholder="Password"
               required

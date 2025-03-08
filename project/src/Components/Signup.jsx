@@ -12,6 +12,19 @@ const Signup = ({ onNavigate }) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  const handleSignup = async () => {
+    const response = await fetch("http://localhost:5000/signup", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        username: formData.username,
+        password: formData.password,
+      }),
+    });
+    const data = await response.json();
+    alert(data.message);
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (formData.password !== formData.confirmPassword) {
@@ -19,6 +32,7 @@ const Signup = ({ onNavigate }) => {
       return;
     }
     console.log("Signup Successful", formData);
+    handleSignup();  // Calling the signup API
     onNavigate("welcome"); // Navigate to Welcome page
   };
 
@@ -48,7 +62,7 @@ const Signup = ({ onNavigate }) => {
               name="password"
               value={formData.password}
               onChange={handleChange}
-              placeholder="Password"
+              placeholder="Password   eg: 5tr0ng@p4ssWord"
               className="w-full pl-10 pr-4 py-2 bg-[#FFFFFF] focus:outline-none focus:ring-1 focus:ring-[#2D5597]"
               required
             />
