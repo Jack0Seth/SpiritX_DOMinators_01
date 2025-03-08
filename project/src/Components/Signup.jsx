@@ -28,7 +28,7 @@ const Signup = () => {
           SpiritX SignUp
         </h2>
         <form onSubmit={handleSubmit} className="space-y-4">
-          {/* Username Field */}
+          {/*Username Field*/}
           <div className="relative">
             <FaUser className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#00264D]" />
             <input
@@ -42,7 +42,7 @@ const Signup = () => {
             />
           </div>
           
-          {/* Password Field */}
+          {/*Password Field*/}
           <div className="relative">
             <FaLock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#00264D]" />
             <input
@@ -56,7 +56,7 @@ const Signup = () => {
             />
           </div>
 
-          {/* Confirm Password Field */}
+          {/*Confirm Password*/}
           <div className="relative">
             <FaLock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#00264D]" />
             <input
@@ -70,7 +70,7 @@ const Signup = () => {
             />
           </div>
 
-          {/* Submit Button */}
+          {/*signup btn*/}
           <button
             type="submit"
             className="w-full bg-[#1E3F7F] text-white py-2 hover:bg-[#00264D] transition duration-200"
