@@ -17,7 +17,7 @@ const Welcome = () => {
       <h2 className="text-lg font-medium mb-10">WELCOME {username}!</h2>
 
       {/* SpiritX Logo */}
-      <img src={spiritXLogo} alt="SpiritX Logo" className="w-60 mb-6" />
+      <img src={spiritXLogo} alt="SpiritX Logo" className="w-86 mb-6" />
 
       {/* Logout Button */}
       <button
