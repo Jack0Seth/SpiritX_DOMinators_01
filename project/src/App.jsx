@@ -1,20 +1,16 @@
 import { useState } from 'react'
-import Signup from './Components/Signup'
 import Login from './Components/Login'
+import Signup from './Components/Signup'
+import Welcome from './Components/Welcome'
 
 function App() {
-  const [authPage, setAuthPage] = useState("login"); // Default is Login page
+  const [count, setCount] = useState(0)
 
   return (
-    <div>
-      {authPage === "login" ? (
-        <Login navigateToSignup={() => setAuthPage("signup")} />
-      ) : (
-        <Signup navigateToLogin={() => setAuthPage("login")} />
-      )}
-    </div>
-  );
+    <>
+      <Welcome/>
+    </>
+  )
 }
-
 
 export default App
