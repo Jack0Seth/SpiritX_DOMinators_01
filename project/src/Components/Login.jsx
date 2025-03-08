@@ -15,20 +15,20 @@ const Login = ({ onNavigate }) => {
           SpiritX Login
         </h2>
         <form onSubmit={handleLogin}>
-          <div className="mb-4 flex items-center bg-white p-2 shadow-md relative">
+          <div className="mb-4 flex items-center bg-white shadow-md relative">
             <FaUser className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#00264D]" />
             <input
               type="text"
-              className="w-full outline-none bg-transparent pl-10 py-2 text-gray-700"
+              className="w-full outline-none bg-transparent pl-10 py-2 text-gray-700 focus:outline-none focus:ring-1 focus:ring-[#2D5597]"
               placeholder="Username"
               required
             />
           </div>
-          <div className="mb-4 flex items-center bg-white p-2 shadow-md relative">
+          <div className="mb-4 flex items-center bg-white shadow-md relative">
             <FaLock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#00264D]" />
             <input
               type="password"
-              className="w-full outline-none bg-transparent pl-10 py-2 text-gray-700"
+              className="w-full outline-none bg-transparent pl-10 py-2 text-gray-700 focus:outline-none focus:ring-1 focus:ring-[#2D5597]"
               placeholder="Password"
               required
             />
