@@ -33,7 +33,7 @@ const Welcome = () => {
 
       {/* Dominators Logo */}
       <div className="mt-10 flex flex-col items-center">
-        <img src={dominatorsLogo} alt="Dominators Logo" className="h-80" />
+        <img src={dominatorsLogo} alt="Dominators Logo" className="h-28" />
       </div>
     </div>
   );
