@@ -1,6 +1,1 @@
 @import "tailwindcss";
-
-@theme components {
-  @apply bg-gray-900 text-white;
-  
-}
