@@ -23,8 +23,8 @@ const Welcome = () => {
       <button
         className="mt-6 flex items-center gap-2 bg-[#FEEFFF] text-[#221E31] px-6 py-2 rounded-lg shadow-md hover:bg-[#D9D9D9] transition duration-200"
         onClick={() => {
-          localStorage.removeItem("username"); // Clear username on logout
-          window.location.href = "/login"; // Redirect to login page
+          localStorage.removeItem("username"); 
+          window.location.href = "/login"; 
         }}
       >
         <FaSignOutAlt />
