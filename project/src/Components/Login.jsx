@@ -2,7 +2,7 @@ import React from "react";
 
 const Login = () => {
   return (
-    <div className="flex justify-center items-center h-screen bg-gradient-to-br from-purple-700 to-blue-600">
+    <div className="flex justify-center items-center h-screen bg-gradient-to-br from-purple-900 to-blue-600">
       <div className="bg-purple-300 p-8 rounded-3xl shadow-lg w-96 relative">
         <h2 className="text-2xl font-bold text-center mb-6 text-gray-900">SpiritX Login</h2>
         <form>
