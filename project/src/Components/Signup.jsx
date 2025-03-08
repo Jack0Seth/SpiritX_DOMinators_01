@@ -28,7 +28,7 @@ const Signup = () => {
           SpiritX SignUp
         </h2>
         <form onSubmit={handleSubmit} className="space-y-4">
-          {/* Username Field */}
+          {/*Username Field*/}
           <div className="relative">
             <FaUser className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#00264D]" />
             <input
@@ -37,12 +37,12 @@ const Signup = () => {
               value={formData.username}
               onChange={handleChange}
               placeholder="UserName"
-              className="w-full pl-10 pr-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2D5597]"
+              className="w-full pl-10 pr-4 py-2 bg-[#FFFFFF] focus:outline-none focus:ring-1 focus:ring-[#2D5597]"
               required
             />
           </div>
           
-          {/* Password Field */}
+          {/*Password Field*/}
           <div className="relative">
             <FaLock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#00264D]" />
             <input
@@ -51,12 +51,12 @@ const Signup = () => {
               value={formData.password}
               onChange={handleChange}
               placeholder="Password"
-              className="w-full pl-10 pr-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2D5597]"
+              className="w-full pl-10 pr-4 py-2 bg-[#FFFFFF] focus:outline-none focus:ring-1 focus:ring-[#2D5597]"
               required
             />
           </div>
 
-          {/* Confirm Password Field */}
+          {/*Confirm Password*/}
           <div className="relative">
             <FaLock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#00264D]" />
             <input
@@ -65,12 +65,12 @@ const Signup = () => {
               value={formData.confirmPassword}
               onChange={handleChange}
               placeholder="Confirm Password"
-              className="w-full pl-10 pr-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2D5597]"
+              className="w-full pl-10 pr-4 py-2 bg-[#FFFFFF] focus:outline-none focus:ring-1 focus:ring-[#2D5597]"
               required
             />
           </div>
 
-          {/* Submit Button */}
+          {/*signup btn*/}
           <button
             type="submit"
             className="w-full bg-[#1E3F7F] text-white py-2 hover:bg-[#00264D] transition duration-200"
