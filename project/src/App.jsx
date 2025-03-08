@@ -4,16 +4,14 @@ import Signup from './Components/Signup'
 import Welcome from './Components/Welcome'
 
 function App() {
-  const [authPage, setAuthPage] = useState("login"); // Default is Login page
+  const [currentPage, setCurrentPage] = useState("login"); // Default page
 
   return (
-    <div>
-      {authPage === "login" ? (
-        <Login navigateToSignup={() => setAuthPage("signup")} />
-      ) : (
-        <Signup navigateToLogin={() => setAuthPage("login")} />
-      )}
-    </div>
+    <>
+      {currentPage === "login" && <Login onNavigate={setCurrentPage} />}
+      {currentPage === "signup" && <Signup onNavigate={setCurrentPage} />}
+      {currentPage === "welcome" && <Welcome />}
+    </>
   );
 }
 
