@@ -23,7 +23,7 @@ const Signup = ({ navigateToLogin }) => {
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-[#910E91] to-[#2D5597]">
-      <div className="bg-[#CFBDCB]/80 p-8 rounded-tr-[0px] rounded-2xl rounded-bl-[0px] shadow-2xl w-96 backdrop-blur-md">
+      <div className="bg-[#CFBDCB]/80 p-8 rounded-tl-[50px] rounded-tr-[0px] rounded-bl-[0px] rounded-br-[50px] shadow-2xl w-96 backdrop-blur-md">
         <h2 className="text-2xl font-bold text-center text-[#00264D] mb-6">
           SpiritX SignUp
         </h2>
