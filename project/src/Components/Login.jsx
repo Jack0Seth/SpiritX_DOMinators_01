@@ -1,6 +1,5 @@
 import React from "react";
 import { FaUser, FaLock } from "react-icons/fa";
-import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
@@ -35,9 +34,9 @@ const Login = () => {
         </form>
         <p className="text-center text-[#1E3F7F] mt-4">
           Don't have an account?{" "}
-          <Link to="/signup" className="text-[#00264D] font-semibold hover:underline">
+          <a href="/Signup" className="text-[#00264D] font-semibold hover:underline">
             Signup
-          </Link>
+          </a>
         </p>
       </div>
     </div>

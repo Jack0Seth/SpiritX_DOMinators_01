@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { FaUser, FaLock } from "react-icons/fa";
-import { Link } from "react-router-dom";
 
 const Signup = () => {
   const [formData, setFormData] = useState({
@@ -82,9 +81,9 @@ const Signup = () => {
           {/* Login Link */}
           <p className="text-center text-sm text-[#1E3F7F] mt-2">
             Already have an account?{" "}
-            <Link to="/login" className="text-[#00264D] font-semibold hover:underline">
+            <a href="/login" className="text-[#00264D] font-bold hover:underline">
               Login
-            </Link>
+            </a>
           </p>
         </form>
       </div>
