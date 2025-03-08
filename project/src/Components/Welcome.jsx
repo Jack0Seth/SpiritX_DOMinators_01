@@ -14,7 +14,7 @@ const Welcome = () => {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-[#221E31] text-white">
-      <h2 className="text-lg font-medium mb-4">WELCOME {username}!</h2>
+      <h2 className="text-lg font-medium mb-10">WELCOME {username}!</h2>
 
       {/* SpiritX Logo */}
       <img src={spiritXLogo} alt="SpiritX Logo" className="w-60 mb-6" />
