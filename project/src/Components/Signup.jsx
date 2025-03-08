@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FaUser, FaLock } from "react-icons/fa";
 
-const Signup = () => {
+const Signup = ({ navigateToLogin }) => {
   const [formData, setFormData] = useState({
     username: "",
     password: "",
@@ -28,7 +28,7 @@ const Signup = () => {
           SpiritX SignUp
         </h2>
         <form onSubmit={handleSubmit} className="space-y-4">
-          {/*Username Field*/}
+          {/* Username Field */}
           <div className="relative">
             <FaUser className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#00264D]" />
             <input
@@ -42,7 +42,7 @@ const Signup = () => {
             />
           </div>
           
-          {/*Password Field*/}
+          {/* Password Field */}
           <div className="relative">
             <FaLock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#00264D]" />
             <input
@@ -56,7 +56,7 @@ const Signup = () => {
             />
           </div>
 
-          {/*Confirm Password*/}
+          {/* Confirm Password */}
           <div className="relative">
             <FaLock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#00264D]" />
             <input
@@ -70,7 +70,7 @@ const Signup = () => {
             />
           </div>
 
-          {/*signup btn*/}
+          {/* Signup Button */}
           <button
             type="submit"
             className="w-full bg-[#1E3F7F] text-white py-2 hover:bg-[#00264D] transition duration-200"
@@ -81,9 +81,12 @@ const Signup = () => {
           {/* Login Link */}
           <p className="text-center text-sm text-[#1E3F7F] mt-2">
             Already have an account?{" "}
-            <a href="/login" className="text-[#00264D] font-bold hover:underline">
+            <button
+              onClick={navigateToLogin}
+              className="text-[#00264D] font-bold hover:underline"
+            >
               Login
-            </a>
+            </button>
           </p>
         </form>
       </div>

@@ -1,7 +1,7 @@
 import React from "react";
 import { FaUser, FaLock } from "react-icons/fa";
 
-const Login = () => {
+const Login = ({ navigateToSignup }) => {
   return (
     <div className="flex justify-center items-center h-screen bg-gradient-to-br from-[#910E91] to-[#2D5597]">
       <div className="bg-[rgba(207,189,203,0.75)] p-8 rounded-tl-[50px] rounded-tr-[0px] rounded-bl-[0px] rounded-br-[50px] shadow-lg w-96 relative">
@@ -34,9 +34,12 @@ const Login = () => {
         </form>
         <p className="text-center text-[#1E3F7F] mt-4">
           Don't have an account?{" "}
-          <a href="/Signup" className="text-[#00264D] font-semibold hover:underline">
+          <button
+            onClick={navigateToSignup}
+            className="text-[#00264D] font-semibold hover:underline"
+          >
             Signup
-          </a>
+          </button>
         </p>
       </div>
     </div>
