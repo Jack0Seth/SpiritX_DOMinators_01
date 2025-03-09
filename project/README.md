@@ -1,12 +1,27 @@
-# React + Vite
+Import the dominators.sql database file to MySQL
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Backend Setup and Running Instructions
 
-Currently, two official plugins are available:
+### 1. Initialize Node.js Project (If Not Already Done)
+Run the following command to initialize a Node.js project in your backend directory:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```bash
+npm init -y
 
-## Expanding the ESLint configuration
+npm install express express-session cors
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+## Frontend Setup and Running Instructions
+
+### 1. Install Node.js and npm (If Not Already Installed)
+Make sure you have Node.js and npm installed. You can check this by running:
+
+```bash
+node -v
+npm -v
+
+npm install react-icons
+
+
+#Assumptions
+We used alerts to check and notify users about account creation and login
