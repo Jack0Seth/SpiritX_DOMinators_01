@@ -6,6 +6,7 @@ const Login = ({ onNavigate }) => {
     username: "",
     password: "",
   });
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -13,18 +14,29 @@ const Login = ({ onNavigate }) => {
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    // Perform login authentication logic
     const { username, password } = formData;
-    const response = await fetch("http://localhost:5000/login", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ username, password }),
-    });
-    const data = await response.json();
-    alert(data.message);
-    
-    if (response.ok) {
-      onNavigate("welcome"); // Navigate to the Welcome page on successful login
+    try {
+      const response = await fetch("http://localhost:5000/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ username, password }),
+      });
+
+      const data = await response.json();
+      if (!response.ok) {
+        setErrorMessage(data.message); // Display error message
+        return;
+      }
+
+      alert(data.message); // Success message (optional)
+      
+      // Store username in sessionStorage (or localStorage for persistence)
+      sessionStorage.setItem('username', data.username);
+      
+      // Navigate to the Welcome page on successful login
+      onNavigate("welcome");
+    } catch (error) {
+      setErrorMessage("An error occurred. Please try again."); // Handle network errors
     }
   };
 
@@ -59,6 +71,11 @@ const Login = ({ onNavigate }) => {
               required
             />
           </div>
+          {errorMessage && (
+            <div className="text-red-500 text-sm text-center mb-4">
+              {errorMessage}
+            </div>
+          )}
           <button
             type="submit"
             className="w-full bg-[#1E3F7F] text-white py-2 hover:bg-[#00264D] transition duration-300 shadow-md"
